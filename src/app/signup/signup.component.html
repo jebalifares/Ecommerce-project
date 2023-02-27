@@ -1,0 +1,28 @@
+    <div *ngIf="!showLogin">
+    <h1>Seller Signup</h1>
+    <form #formSign="ngForm" (ngSubmit)="signup(formSign.value)" class="form-signup" >
+        <input ngModel name="username" class="input-form" placeholder="Username" type="text">
+        <input ngModel name="email" class="input-form" placeholder="Address Email" type="email">
+
+        <input ngModel name="password" class="input-form" placeholder="Password" type="password">
+        
+
+
+<button type="submit">Signup</button>
+<a class="link-toogle" (click)="loginForm()">Aleardy have an account?</a>
+    </form>
+</div>    
+<div *ngIf="showLogin">
+    <h1>Seller Login</h1>
+    <form #form="ngForm" (ngSubmit)="login(form.value)" class="form-signup" >
+        <input ngModel name="email" class="input-form" placeholder="Address Email" type="email">
+
+        <input ngModel name="password" class="input-form" placeholder="Password" type="password">
+        
+
+
+<button type="submit">Login</button>
+<a class="link-toogle" (click)="SignuploginForm()">Don't have account ?</a>
+    </form>
+</div> 
+
